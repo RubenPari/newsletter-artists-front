@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+label {
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
