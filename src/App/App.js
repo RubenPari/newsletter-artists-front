@@ -18,7 +18,9 @@ class App extends React.Component {
   async getNews() {
     const timeRange = document.getElementById("time").value;
 
-    return await fetch(process.env.REACT_APP_BASE_URL + "/news/one-" + timeRange);
+    return await fetch(
+      process.env.REACT_APP_BASE_URL + "/news/one-" + timeRange
+    );
   }
 
   componentDidMount() {
@@ -43,7 +45,7 @@ class App extends React.Component {
               <label htmlFor="time">Choose a time range</label>
 
               <select name="time" id="time">
-                <option value="day" selected>
+                <option value="day" defaultValue={true}>
                   1 day
                 </option>
                 <option value="week">1 week</option>
