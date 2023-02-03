@@ -18,8 +18,16 @@ class App extends React.Component {
   async getNews() {
     const timeRange = document.getElementById("time").value;
 
+    // set header with CORS disabled
+    const opt = {
+      headers: {
+        mode: "no-cors",
+      },
+    };
+
     return await fetch(
-      process.env.REACT_APP_BASE_URL + "/news/one-" + timeRange
+      process.env.REACT_APP_BASE_URL + "/news/one-" + timeRange,
+      opt
     );
   }
 
